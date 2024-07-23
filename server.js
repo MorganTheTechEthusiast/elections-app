@@ -1,11 +1,11 @@
 const express = require('express');
-// const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 const path = require('path');
 
 // Multer for file uploads
-// const multer = require('multer');
+const multer = require('multer');
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -14,7 +14,8 @@ app.set('view engine', 'ejs');
 // Static files
 app.set('views', path.join(__dirname, 'views'));
 app.use('/CSS', express.static(path.join(__dirname, 'public/CSS')));
-app.use('/CSS', express.static(path.join(__dirname, 'public/CSS')));
+// app.use('/CSS', express.static(path.join(__dirname, 'public/CSS')));
+
 
 
 // Global variable to store user data
