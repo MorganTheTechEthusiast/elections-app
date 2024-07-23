@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Party Registration</title>
+    <link rel="stylesheet" type="text/css" href="/public/CSS/Party_registration.css">
+</head>
+<body>
+    <h1>Party Registration Form</h1>
+    <form action="/registerParty" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="partyname">Party Name:</label>
+            <input type="text" id="partyname" name="partyname" required>
+        </div>
+        <div>
+            <label for="partylogo">Party Logo:</label>
+            <input type="file" id="partylogo" name="partylogo" accept="image/*" required>
+        </div>
+        <div>
+            <button type="submit">Register Party</button>
+        </div>
+    </form>
+</body>
+</html>
