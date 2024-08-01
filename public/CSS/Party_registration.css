@@ -46,7 +46,7 @@ input[type="file"] {
 button {
     width: 100%;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #5cb85c;
     color: #FFF;
     border: none;
     border-radius: 5px;
@@ -55,5 +55,5 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #5cb85c;
 }

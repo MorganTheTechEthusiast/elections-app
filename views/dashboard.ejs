@@ -4,14 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
 </head>
 <body>
-    <h1>Welcome to the Election Dashboard</h1>
-    <ul>
-        <li><a href="/Voter_registration">Voter Registration</a></li>
-        <li><a href="/Party_registration">Party Registration</a></li>
-        <li><a href="/Candidate_registration">Candidate Registration</a></li>
-    </ul>
+    <div class="dashboard-container">
+        <header>
+            <h1>Welcome To The Election Dashboard</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/Voter_registration">Voter Registration</a></li>
+                <li><a href="/party_registration">Party Registration</a></li>
+                <li><a href="/candidate">Candidate Registration</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="voter-registration">
+                <h2>Voter Registration</h2>
+                <p>Register new voters by clicking the link below:</p>
+                <a href="/Voter_registration" class="button">Go to Voter Registration</a>
+            </section>
+            <section id="party-registration">
+                <h2>Party Registration</h2>
+                <p>Register new parties by clicking the link below:</p>
+                <a href="/party_registration" class="button">Go to Party Registration</a>
+            </section>
+            <section id="candidate-registration">
+                <h2>Candidate Registration</h2>
+                <p>Register new candidates by clicking the link below:</p>
+                <a href="/candidate" class="button">Go to Candidate Registration</a>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

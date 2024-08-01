@@ -8,13 +8,12 @@ body {
     margin: 0;
 }
 
-.registration-container {
+.form-container {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
-    text-align: center;
 }
 
 form {
@@ -24,24 +23,22 @@ form {
 
 h2 {
     margin-bottom: 20px;
+    text-align: center;
     color: #333;
 }
 
 label {
     margin-bottom: 5px;
     color: #555;
-    text-align: left;
 }
 
 input[type="text"],
-input[type="date"],
 input[type="file"] {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
-    width: 100%; /* Ensure full width */
 }
 
 button {
@@ -56,5 +53,5 @@ button {
 }
 
 button:hover {
-    background-color: #4cae4c;
+    background-color: #5cb85c;
 }

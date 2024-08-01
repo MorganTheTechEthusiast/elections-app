@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-.registration-container {
+.login-container {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -34,14 +34,33 @@ label {
 }
 
 input[type="text"],
-input[type="date"],
-input[type="file"] {
+input[type="password"] {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
-    width: 100%; /* Ensure full width */
+    width: 90%; /* Ensure full width */
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input[type="password"] {
+    padding-right: 10px; /* Add space for the toggle button */
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
 }
 
 button {
@@ -57,4 +76,18 @@ button {
 
 button:hover {
     background-color: #4cae4c;
+}
+
+.signup-link {
+    margin-top: 15px;
+    color: #555;
+}
+
+.signup-link a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
 }

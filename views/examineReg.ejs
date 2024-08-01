@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voter Registration</title>
+    <link rel="stylesheet" type="text/css" href="CSS/Vote_registration.css">
+</head>
+<body>
+    <h1>Voter Registration Form</h1>
+    <form action="/Voter_registration" method="post" nctype="multipart/form-data">
+        <div>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required>
+        </div>
+        <div>
+            <label for="middlename">Middle Name:</label>
+            <input type="text" id="middlename" name="middlename">
+        </div>
+        <div>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+        </div>
+        <!--Render from the database-->
+        <div>
+            <select name="" id="">
+                <option value="" disabled selected>Select Role</option>
+               <% roles.forEach(role => { %>
+                
+                <option value="">
+                    <%= role.Role_Name %>
+ 
+                </option>
+               <% }) %>                                
+            </select>
+        </div>
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        <div>
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo" required>
+        </div>
+        <div>
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</body>
+</html>

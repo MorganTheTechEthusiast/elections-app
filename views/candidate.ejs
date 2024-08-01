@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="CSS/Vote_registration.css">
+    <title>Candidate Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CSS/candidate.css">
 </head>
 <body>
-    <div class="registration-container">
-        <form action="/Voter_registration" method="post" enctype="multipart/form-data">
-            <h2>Registration Form</h2>
+    <div class="form-container">
+        <form action="/candidate" method="post" enctype="multipart/form-data">
+            <h2>Candidate Registration</h2>
             
             <label for="firstname">First Name</label>
             <input type="text" id="firstname" name="firstname" required>
             
             <label for="middlename">Middle Name</label>
-            <input type="text" id="middlename" name="middlename" required>
+            <input type="text" id="middlename" name="middlename">
             
             <label for="lastname">Last Name</label>
             <input type="text" id="lastname" name="lastname" required>
             
-            <label for="county">County</label>
-            <input type="text" id="county" name="county" required>
+            <label for="positionid">Position ID</label>
+            <input type="text" id="positionid" name="positionid" required>
             
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" name="dob" required>
+            <label for="partyid">Party ID</label>
+            <input type="text" id="partyid" name="partyid" required>
             
             <label for="photo">Photo</label>
             <input type="file" id="photo" name="photo" accept="image/*" required>
