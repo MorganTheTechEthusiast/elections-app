@@ -33,10 +33,24 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
+    margin: 40px;
+}
+
+.login{
+    padding: 10px 20px;
+    background-color: #4cae4c;
+    border: 1% solid;
+    border-radius: 10px;
+    color: #333;
+}
+
+.login:hover{
+    color: #fff;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    color: #4cae4c;
 }
 
 .hero {
@@ -112,7 +126,7 @@ footer {
 }
 
 .social-link:hover {
-    text-decoration: underline;
+background-color: #4cae4c;
 }
 
 .contact-form {

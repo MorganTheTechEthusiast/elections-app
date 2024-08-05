@@ -1,3 +1,4 @@
+//jshint eversion:6
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
@@ -16,6 +17,7 @@ app.set('view engine', 'ejs');
 // Static files
 app.set('views', path.join(__dirname, 'views'));
 app.use('/CSS', express.static(path.join(__dirname, 'public/CSS')));
+app.use ('/Images', express.static(path.join(__dirname, 'public/Images')));
 
 // Connecting The SQLITE Database
 const sqlite3 = require('sqlite3').verbose();
@@ -27,6 +29,7 @@ db.serialize(() => {
     db.run("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, First_Name TEXT, Middle_Name TEXT, Last_Name TEXT, County TEXT, DOB TEXT, Photo BLOB)");
     db.run("CREATE TABLE IF NOT EXISTS parties (id INTEGER PRIMARY KEY AUTOINCREMENT, Party_Name TEXT, Party_Logo BLOB)");
     db.run("CREATE TABLE IF NOT EXISTS candidates (id INTEGER PRIMARY KEY AUTOINCREMENT, First_Name TEXT, Middle_Name TEXT, Last_Name TEXT, Position_Id INTEGER, Party_Id INTEGER, Photo BLOB)");
+    db.run("CREATE TABLE IF NOT EXISTS contactUs ( id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, message TEXT)");
 });
 
 // Route TO Handle to the Signup form
@@ -141,6 +144,20 @@ app.post('/candidate', upload.single('photo'), (req, res) => {
     });
 });
 
+//Route to handle candidate registration form submission
+app.post('/contactUs', (req, res) => {
+    const {name, email, message} = req.body;
+
+    db.run("INSERT INTO contactUs (name, email, message) VALUES (?, ?, ?)", [name, email, message], (err) => {
+        if (err) {
+            console.error(err.message);
+            res.send("Error saving data");
+        } else {
+            res.render("Feedback");
+        }
+    })
+})
+
 
 //Route to Rander the Dashboard
 app.get('/dashboard', (req, res) => {
@@ -168,7 +185,7 @@ app.post('/login', (req, res) => {
             if (match) {
                 res.render("dashboard");
             } else {
-                res.render("login-error-message");
+                res.render("Wrong_password");
             }
         }
     });
@@ -178,5 +195,16 @@ app.post('/login', (req, res) => {
 //Route to handle th Home page 
 app.get('/home', (req, res) => {
     res.render('home');
-})
+});
+
+//Route to handle the Wrong Password page
+app.get('/Wrong_password', (req, res) => {
+    res.render('wrong_password');
+});
+
+// Route to handle the About Us Page
+app.get('/about', (req, res) => {
+    res.render('about');
+});
+
 

@@ -19,6 +19,20 @@
             
             <label for="lastname">Last Name</label>
             <input type="text" id="lastname" name="lastname" required>
+
+             <!--Rendering from the database-->
+        <div class="Database">
+            <select name="" id="">
+                <option value="" disabled selected>Select Role</option>
+               <% roles.forEach(role => { %>
+                
+                <option value="">
+                    <%= role.Role_Name %>
+ 
+                </option>
+               <% }) %>                                
+            </select>
+        </div>
             
             <label for="county">County</label>
             <input type="text" id="county" name="county" required>
