@@ -79,6 +79,10 @@ app.get('/Voter_registration', (req, res) => {
 });
 
 // Route to handle voter registration form submission
+
+app.get('/contactUs', (req, res) => {
+    res.render("contactUs")
+})
 app.post('/Voter_registration', upload.single('photo'), (req, res) => {
     const { firstname, middlename, lastname, county, dob } = req.body;
     const photo = req.file ? req.file.buffer : null;
