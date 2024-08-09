@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-icons i {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .feature {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.sidebar .feature i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.sidebar .feature span {
+    color: #fff;
+}
+
+.content {
+    padding: 20px;
+    flex: 1;
+}
+
+.voters-info {
+    margin-bottom: 20px;
+}
+
+.voters-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.voters-info p {
+    font-size: 16px;
+    color: #555;
+}
+
+.chairman-section {
+    margin-top: 40px;
+}
+
+.chairman-section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.chairman-candidates {
+    display: flex;
+    justify-content: space-between;
+}
+
+.candidate {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.candidate i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.candidate p {
+    font-size: 16px;
+    color: #555;
+}
+
+.candidate p strong {
+    color: #000;
+}
+
+.vote-bar {
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.vote-percentage {
+    height: 24px;
+    text-align: center;
+    color: #fff;
+    line-height: 24px;
+    border-radius: 4px;
+}
+
+.voters-info-section{
+    display: flex;
+    justify-content: space-around;
+}
+
+.voters-info{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.result-heading{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 50px;
+}

@@ -187,7 +187,7 @@ app.post('/login', (req, res) => {
             // Compare passwords
             const match = bcrypt.compareSync(password, row.Password);
             if (match) {
-                res.render("dashboard");
+                res.render("newDashboard");
             } else {
                 res.render("Wrong_password");
             }
@@ -210,5 +210,11 @@ app.get('/Wrong_password', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about');
 });
+
+
+app.get('/newDashboard', (req, res) => {
+    res.render('newDashboard');
+})
+
 
 
